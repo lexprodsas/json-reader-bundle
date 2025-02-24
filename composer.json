@@ -1,0 +1,30 @@
+{
+    "name": "lexprodsas/json-reader-bundle",
+    "type": "contao-bundle",
+    "description": "A Contao module to fetch and display JSON data from a URL.",
+    "version": "1.0.0",
+    "license": "LGPL-3.0-only",
+    "require": {
+        "contao/core-bundle": "^4.13"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lexprodsas\\JsonReaderBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "src/Resources/contao": "files/json-reader-bundle",
+                "src/Resources/views": "templates/json-reader-bundle"
+            }
+        },
+        "contao-manager-plugin": "Lexprodsas\\JsonReaderBundle\\ContaoManager\\Plugin"
+    }
+}

@@ -1,0 +1,11 @@
+services:
+  Lexprodsas\JsonReaderBundle\Controller\JsonReaderController:
+    public: true
+    arguments:
+      $httpClient: '@http_client'
+
+contao.frontend_module.json_reader:
+  class: Lexprodsas\JsonReaderBundle\Controller\JsonReaderController
+  public: true
+  arguments:
+    $httpClient: '@http_client'

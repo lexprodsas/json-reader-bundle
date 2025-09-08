@@ -5,3 +5,9 @@ services:
     public: true
     arguments:
       $httpClient: '@http_client'
+    tags:
+      - name: contao.frontend_module
+        category: miscellaneous
+        template: json_reader
+        renderer: forward
+        method: __invoke
